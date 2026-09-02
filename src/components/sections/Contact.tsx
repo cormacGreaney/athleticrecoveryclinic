@@ -1,13 +1,13 @@
 import { site } from "../../config/site";
-import { IconInstagram, IconMail, IconPhone, IconPin } from "../icons";
+import { IconInstagram, IconMail, IconPin, IconWhatsApp } from "../icons";
 
 const contacts = [
   {
-    label: "Phone",
+    label: "WhatsApp",
     value: site.phone,
-    href: site.phoneHref,
-    icon: IconPhone,
-    external: false,
+    href: site.whatsapp,
+    icon: IconWhatsApp,
+    external: true,
   },
   {
     label: "Email",

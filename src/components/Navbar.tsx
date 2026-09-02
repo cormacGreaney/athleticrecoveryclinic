@@ -37,7 +37,7 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-[4.25rem] w-full max-w-6xl items-center justify-between px-5 sm:px-8">
-        <BrandLink gradientId="arc-mark-nav" />
+        <BrandLink priority />
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
           {navLinks.map((link) => (

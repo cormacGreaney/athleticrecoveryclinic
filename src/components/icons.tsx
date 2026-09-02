@@ -29,26 +29,6 @@ export function IconMassage(props: IconProps) {
   );
 }
 
-export function IconManual(props: IconProps) {
-  return (
-    <svg {...base} {...props}>
-      <path
-        d="M24 8 L40 38 H8 Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M24 18 L32 36 H16 Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-        opacity="0.7"
-      />
-    </svg>
-  );
-}
-
 export function IconCupping(props: IconProps) {
   return (
     <svg {...base} {...props}>
@@ -161,14 +141,18 @@ export function IconMail(props: IconProps) {
   );
 }
 
-export function IconPhone(props: IconProps) {
+export function IconWhatsApp(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
       <path
-        d="M7.2 3.8h2.4l1.2 3.2-1.6 1.2a12.5 12.5 0 0 0 5.6 5.6l1.2-1.6 3.2 1.2v2.4c0 .9-.7 1.7-1.6 1.8-7.2.8-13.2-5.2-12.4-12.4.1-.9.9-1.6 1.8-1.6Z"
+        d="M12 4.5a7.5 7.5 0 0 0-6.4 11.4L4.8 19.2l3.4-.9A7.5 7.5 0 1 0 12 4.5Z"
         stroke="currentColor"
         strokeWidth="1.6"
         strokeLinejoin="round"
+      />
+      <path
+        d="M9.4 9.6c.2-.4.3-.4.6-.4h.5c.2 0 .4.1.5.3l.6 1.4c.1.2 0 .4-.1.6l-.4.4c-.1.2 0 .4.2.6.3.4.8.8 1.3 1.1.2.1.5.1.6-.1l.4-.4c.2-.2.4-.2.6-.1l1.4.6c.2.1.3.3.3.5v.5c0 .3 0 .4-.4.6A4.4 4.4 0 0 1 9.4 9.6Z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -190,7 +174,6 @@ export function IconPin(props: IconProps) {
 
 export const serviceIcons = {
   "sports-massage": IconMassage,
-  "manual-therapy": IconManual,
   cupping: IconCupping,
   compression: IconCompression,
   "tens-ems": IconPulse,

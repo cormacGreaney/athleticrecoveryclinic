@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   creator: site.practitioner.name,
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/logo-mark.png", type: "image/png" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
@@ -84,7 +84,7 @@ const jsonLd = {
   alternateName: site.shortName,
   description,
   email: site.email,
-  telephone: site.phoneHref.replace("tel:", ""),
+  telephone: "+353894025849",
   image: "/og.png",
   founder: {
     "@type": "Person",
@@ -98,7 +98,7 @@ const jsonLd = {
     addressCountry: "IE",
   },
   areaServed: "Nenagh",
-  sameAs: [site.instagram],
+  sameAs: [site.instagram, site.whatsapp],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -9,9 +9,10 @@ export const site = {
   country: "Ireland",
   instagram: "https://www.instagram.com/athleticrecoveryclinic/",
   instagramHandle: "@athleticrecoveryclinic",
-  email: "dan@athleticrecoveryclinic.ie",
-  phone: "087 123 4567",
-  phoneHref: "tel:+353871234567",
+  email: "athleticrecoveryclinic@gmail.com",
+  phone: "089 402 5849",
+  phoneHref: "tel:+353894025849",
+  whatsapp: "https://wa.me/353894025849",
   practitioner: {
     name: "Dan Nolan",
     title: "Sports Massage Therapist & Sports Nutrition Coach",
@@ -31,11 +32,6 @@ export const services = [
     id: "sports-massage",
     title: "Sports Massage",
     copy: "For tightness, soreness, and getting movement back after training or a long week.",
-  },
-  {
-    id: "manual-therapy",
-    title: "Manual Therapy",
-    copy: "Hands-on work for muscular pain and tension that isn’t shifting.",
   },
   {
     id: "cupping",
@@ -59,11 +55,9 @@ export const services = [
   },
 ] as const;
 
-export const whoItsFor = [
-  "Tightness",
-  "Soreness",
-  "Muscular pain",
-  "Fatigue",
-  "General tension",
-  "Performance recovery",
+export const qualifications = [
+  "Level 3 Sports Massage",
+  "Currently completing Level 4 Sports Massage, so I can work with injuries",
+  "Level 6 Sports Nutrition (ITEC)",
+  "Manual therapy training in Thailand — trigger point therapy and sports massage (RSM International Academy)",
 ] as const;

@@ -9,14 +9,14 @@ PUBLIC = ROOT / "public"
 NAVY = (14, 31, 40)
 GREEN = (52, 183, 67)
 WHITE = (243, 247, 245)
-LEFT = (45, 184, 90)
-RIGHT = (22, 130, 80)
-INNER = (20, 92, 72)
+LEFT = (28, 125, 115)
+RIGHT = (45, 184, 90)
+INNER = (14, 31, 40)
 
-# Same polygons as src/components/Logo.tsx (viewBox 0 0 80 80)
-LEFT_PTS = [(40, 6), (12, 70), (40, 70), (32, 48)]
-RIGHT_PTS = [(40, 6), (68, 70), (40, 70), (48, 48)]
-INNER_PTS = [(40, 30), (53, 70), (27, 70)]
+# Same evenodd shape as src/components/Logo.tsx (viewBox 0 0 80 80)
+LEFT_PTS = [(58, 5), (4, 74), (34, 74), (50, 33)]
+RIGHT_PTS = [(58, 5), (76, 74), (60, 74), (50, 33)]
+INNER_PTS = []
 
 
 def scale_pts(pts, size, pad):
@@ -35,7 +35,8 @@ def draw_mark(size, bg=NAVY, pad_ratio=0.16, transparent=False):
     pad = size * pad_ratio
     draw.polygon(scale_pts(LEFT_PTS, size, pad), fill=LEFT)
     draw.polygon(scale_pts(RIGHT_PTS, size, pad), fill=RIGHT)
-    draw.polygon(scale_pts(INNER_PTS, size, pad), fill=INNER)
+    if INNER_PTS:
+        draw.polygon(scale_pts(INNER_PTS, size, pad), fill=INNER)
     return img
 
 
@@ -71,37 +72,16 @@ def make_og():
     og = Image.composite(green, og, glow)
     og = Image.blend(Image.new("RGB", (w, h), NAVY), og, 0.16)
 
-    mark = draw_mark(168, pad_ratio=0.04, transparent=True)
-    display = font(["segoeuib.ttf", "arialbd.ttf"], 118)
-    sub = font(["segoeui.ttf", "arial.ttf"], 36)
-
-    arc = "ARC"
-    subtitle = "Athletic Recovery Clinic"
-    scratch = ImageDraw.Draw(og)
-    arc_bbox = scratch.textbbox((0, 0), arc, font=display)
-    sub_bbox = scratch.textbbox((0, 0), subtitle, font=sub)
-    arc_w, arc_h = arc_bbox[2] - arc_bbox[0], arc_bbox[3] - arc_bbox[1]
-    sub_w = sub_bbox[2] - sub_bbox[0]
-
-    gap = 22
-    row_w = mark.width + gap + arc_w
-    row_left = (w - row_w) // 2
-    row_top = 196
-
-    og.paste(mark, (row_left, row_top + (arc_h - mark.height) // 2 + 8), mark)
-    scratch = ImageDraw.Draw(og)
-    scratch.text(
-        (row_left + mark.width + gap, row_top),
-        arc,
-        font=display,
-        fill=GREEN,
+    lockup = Image.open(PUBLIC / "logo-lockup.png").convert("RGBA")
+    target_w = 780
+    ratio = target_w / lockup.width
+    lockup = lockup.resize(
+        (target_w, int(lockup.height * ratio)),
+        Image.Resampling.LANCZOS,
     )
-    scratch.text(
-        ((w - sub_w) // 2, row_top + arc_h + 36),
-        subtitle,
-        font=sub,
-        fill=WHITE,
-    )
+    x = (w - lockup.width) // 2
+    y = (h - lockup.height) // 2
+    og.paste(lockup, (x, y), lockup)
     og.save(PUBLIC / "og.png", "PNG", optimize=True)
 
 
@@ -117,13 +97,9 @@ def main():
         rounded_icon(size).save(PUBLIC / name, "PNG", optimize=True)
 
     brand = PUBLIC / "brand"
-    for leftover in (
-        brand / "logo.png",
-        brand / "logo-crop.png",
-        brand / "logo-transparent.png",
-    ):
-        leftover.unlink(missing_ok=True)
-    if brand.exists() and not any(brand.iterdir()):
+    for leftover in brand.glob("*") if brand.exists() else []:
+        leftover.unlink()
+    if brand.exists():
         brand.rmdir()
 
     print("wrote og + icons, removed old brand screenshots")

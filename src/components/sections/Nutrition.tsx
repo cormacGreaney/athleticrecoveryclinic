@@ -8,9 +8,9 @@ export function Nutrition() {
             I also write nutrition plans.
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/62 sm:text-lg">
-            I’m a Sports Nutrition Coach. If you want help with food around
-            training, recovery, or just eating a bit better, I can put a plan
-            together for you.
+            I’m a Level 6 Sports Nutrition Coach (ITEC). If you want help with
+            food around training, recovery, or just eating a bit better, I can
+            put a plan together for you.
           </p>
         </div>
       </div>

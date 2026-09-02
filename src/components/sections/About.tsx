@@ -1,9 +1,9 @@
-import { site, whoItsFor } from "../../config/site";
+import { qualifications, site } from "../../config/site";
 
 export function About() {
   return (
     <section id="about" className="section-wrap">
-      <div className="section-inner grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end md:gap-16">
+      <div className="section-inner grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-start md:gap-16">
         <div>
           <p className="eyebrow">About</p>
           <h2 className="section-title mt-4">I’m {site.practitioner.name}.</h2>
@@ -13,8 +13,10 @@ export function About() {
               people who are tight, sore, tired, or carrying muscular pain.
             </p>
             <p>
-              I also do sports nutrition — plans for training, recovery, and
-              general health.
+              I’m in the gym, I kickbox, and I train Brazilian jiu-jitsu. I’ve
+              had my own injuries too — a grade 3 tibia fracture, repeated
+              rotator cuff tears — so I know what it’s like when your body
+              stops you training.
             </p>
             <p>
               The new space is being set up. I’ll take existing and new
@@ -39,23 +41,17 @@ export function About() {
             </div>
             <div>
               <dt className="text-xs uppercase tracking-[0.18em] text-white/40">
-                What I do
+                Qualifications
               </dt>
-              <dd className="mt-1 text-white/85">
-                Sports massage, recovery treatments, nutrition
+              <dd className="mt-3">
+                <ul className="space-y-2.5 text-[0.95rem] leading-snug text-white/80">
+                  {qualifications.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </dd>
             </div>
           </dl>
-          <ul className="mt-8 flex flex-wrap gap-2">
-            {whoItsFor.map((item) => (
-              <li
-                key={item}
-                className="rounded-full border border-white/10 bg-white/3 px-3 py-1.5 text-xs tracking-wide text-white/70"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
         </aside>
       </div>
     </section>

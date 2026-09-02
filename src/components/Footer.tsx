@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-white/8 bg-arc-void">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 py-12 sm:px-8 md:flex-row md:items-end md:justify-between">
         <div className="max-w-sm">
-          <BrandLink gradientId="arc-mark-footer" />
+          <BrandLink />
           <p className="mt-4 text-sm leading-relaxed text-white/50">
             Sports massage, recovery treatments, and nutrition.{" "}
             {site.locationShort}.
@@ -24,7 +24,9 @@ export function Footer() {
             </a>
           ))}
           <a
-            href={site.phoneHref}
+            href={site.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm text-white/60 transition-colors hover:text-white"
           >
             {site.phone}

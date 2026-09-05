@@ -3,7 +3,7 @@ export const site = {
   shortName: "ARC",
   tagline: "Move better. Feel better. Recover better.",
   description:
-    "Sports massage, recovery treatments, and nutrition in Nenagh with Dan Nolan.",
+    "Sports massage, recovery treatments, and nutrition in Nenagh with Daniel Nolan.",
   location: "Nenagh, Co. Tipperary",
   locationShort: "Nenagh",
   country: "Ireland",
@@ -14,7 +14,7 @@ export const site = {
   phoneHref: "tel:+353894025849",
   whatsapp: "https://wa.me/353894025849",
   practitioner: {
-    name: "Dan Nolan",
+    name: "Daniel Nolan",
     title: "Sports Massage Therapist & Sports Nutrition Coach",
     shortTitle: "Recovery Specialist",
   },
@@ -56,8 +56,8 @@ export const services = [
 ] as const;
 
 export const qualifications = [
-  "Level 3 Sports Massage",
-  "Currently completing Level 4 Sports Massage, so I can work with injuries",
-  "Level 6 Sports Nutrition (ITEC)",
-  "Manual therapy training in Thailand — trigger point therapy and sports massage (RSM International Academy)",
+  "Sports Massage",
+  "Sports Nutrition",
+  "Cupping Therapy",
+  "International training completed in trigger point therapy at RSM Academy Chiang Mai",
 ] as const;

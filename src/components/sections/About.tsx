@@ -9,18 +9,39 @@ export function About() {
           <h2 className="section-title mt-4">I’m {site.practitioner.name}.</h2>
           <div className="mt-6 space-y-5 text-base leading-relaxed text-white/65 sm:text-lg">
             <p>
-              I’m opening Athletic Recovery Clinic in Nenagh. I work with
-              people who are tight, sore, tired, or carrying muscular pain.
+              My name is Daniel Nolan, and I run Athletic Recovery Clinic here
+              in Nenagh. I help people who feel tight, sore, tired, or limited
+              by muscular pain — whether you’re an athlete, someone who trains
+              casually, or someone who simply wants your body to feel normal
+              again. If pain or restricted movement is affecting your work,
+              training, or everyday life, my job is to help you move better
+              and feel better.
             </p>
             <p>
-              I’m in the gym, I kickbox, and I train Brazilian jiu-jitsu. I’ve
-              had my own injuries too — a grade 3 tibia fracture, repeated
-              rotator cuff tears — so I know what it’s like when your body
-              stops you training.
+              I’m active myself — I lift, kickbox, and train Brazilian
+              jiu-jitsu — so I understand the demands that training and daily
+              life put on the body. I’ve also dealt with my own injuries,
+              including a grade 3 tibia fracture and repeated rotator cuff
+              tears, so I know how frustrating it is when pain stops you from
+              doing the things you enjoy.
             </p>
             <p>
-              The new space is being set up. I’ll take existing and new
-              clients once it’s ready.
+              I’m currently studying and developing my skills to be able to
+              treat sports injuries properly and safely. In the future, I plan
+              to progress into physiotherapy or a similar clinical path,
+              building on the hands-on work I do now so I can offer even more
+              advanced treatment and rehabilitation treatments.
+            </p>
+            <p>
+              ARC is built for everyone — athletes, workers, parents,
+              students, older adults, and anyone dealing with muscular pain,
+              stiffness, or movement issues. My goal is simple: reduce pain,
+              improve mobility, and help you get back to living the way you
+              want.
+            </p>
+            <p>
+              The new space is being set up, and I’ll be welcoming both new
+              and existing clients once everything is ready.
             </p>
           </div>
         </div>

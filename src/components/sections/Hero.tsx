@@ -17,11 +17,11 @@ export function Hero() {
         </div>
 
         <h1 className="mt-10 max-w-3xl font-display text-[2.15rem] font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl">
-          Move better.
+          MOVE BETTER.
           <br />
-          Feel better.
+          FEEL BETTER.
           <br className="sm:hidden" />{" "}
-          <span className="text-gradient">Recover better.</span>
+          <span className="text-gradient">RECOVER BETTER.</span>
         </h1>
 
         <p className="mt-6 max-w-md text-base leading-relaxed text-white/65 sm:text-lg">

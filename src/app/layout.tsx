@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "cupping therapy",
     "compression boots",
     "TENS EMS",
-    "Dan Nolan",
+    "Daniel Nolan",
   ],
   authors: [{ name: site.practitioner.name }],
   creator: site.practitioner.name,

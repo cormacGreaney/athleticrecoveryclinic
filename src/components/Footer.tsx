@@ -9,7 +9,7 @@ export function Footer() {
           <BrandLink />
           <p className="mt-4 text-sm leading-relaxed text-white/50">
             Sports massage, recovery treatments, and nutrition.{" "}
-            {site.locationShort}.
+            {site.locationShort}. {site.statusLine}.
           </p>
         </div>
 

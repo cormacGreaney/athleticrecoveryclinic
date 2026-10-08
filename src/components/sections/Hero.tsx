@@ -9,7 +9,7 @@ export function Hero() {
       <div className="relative mx-auto flex min-h-[100svh] w-full max-w-6xl flex-col items-center justify-center px-5 pb-16 pt-28 text-center sm:px-8 sm:pt-32">
         <p className="eyebrow">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-arc-green" />
-          {site.locationShort} · Opening soon
+          {site.locationShort} · {site.statusLine}
         </p>
 
         <div className="relative mt-10 sm:mt-12">
@@ -29,11 +29,11 @@ export function Hero() {
         </p>
 
         <div className="mt-9 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:w-auto sm:flex-row">
-          <a href="#services" className="btn-primary">
-            See services
+          <a href="#contact" className="btn-primary">
+            Book now
           </a>
-          <a href="#contact" className="btn-secondary">
-            Get in touch
+          <a href="#services" className="btn-secondary">
+            See services
           </a>
         </div>
       </div>

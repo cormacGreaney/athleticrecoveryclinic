@@ -62,7 +62,7 @@ export function Navbar() {
             <IconInstagram className="h-5 w-5" />
           </a>
           <a href="#contact" className="btn-primary">
-            Get in touch
+            Book now
           </a>
         </div>
 
@@ -120,7 +120,7 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className="btn-primary w-full"
             >
-              Get in touch
+              Book now
             </a>
             <a
               href={site.instagram}

@@ -1,3 +1,6 @@
+import Image from "next/image";
+import clinicTreatment from "../../../public/images/clinic-treatment.jpg";
+import danielTraining from "../../../public/images/daniel-training.jpg";
 import { qualifications, site } from "../../config/site";
 
 export function About() {
@@ -40,40 +43,71 @@ export function About() {
               want.
             </p>
             <p>
-              The new space is being set up, and I’ll be welcoming both new
-              and existing clients once everything is ready.
+              The clinic is now taking bookings from {site.bookingFrom} —
+              new and existing clients welcome.
             </p>
           </div>
         </div>
 
-        <aside className="surface-card p-7 sm:p-8">
-          <p className="font-display text-xl font-semibold tracking-tight text-white">
-            {site.practitioner.name}
-          </p>
-          <p className="mt-2 text-sm leading-relaxed text-arc-green">
-            {site.practitioner.title}
-          </p>
-          <dl className="mt-8 space-y-5 border-t border-white/8 pt-6">
-            <div>
-              <dt className="text-xs uppercase tracking-[0.18em] text-white/40">
-                Based in
-              </dt>
-              <dd className="mt-1 text-white/85">{site.location}</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-[0.18em] text-white/40">
-                Qualifications
-              </dt>
-              <dd className="mt-3">
-                <ul className="space-y-2.5 text-[0.95rem] leading-snug text-white/80">
-                  {qualifications.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </dd>
-            </div>
-          </dl>
+        <aside className="space-y-5">
+          <figure className="photo-frame relative aspect-[4/5]">
+            <Image
+              src={clinicTreatment}
+              alt="Daniel Nolan treating a client at Athletic Recovery Clinic"
+              fill
+              sizes="(min-width: 768px) 40vw, 100vw"
+              placeholder="blur"
+              className="object-cover object-top"
+            />
+          </figure>
+          <div className="surface-card p-7 sm:p-8">
+            <p className="font-display text-xl font-semibold tracking-tight text-white">
+              {site.practitioner.name}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-arc-green">
+              {site.practitioner.title}
+            </p>
+            <dl className="mt-8 space-y-5 border-t border-white/8 pt-6">
+              <div>
+                <dt className="text-xs uppercase tracking-[0.18em] text-white/40">
+                  Based in
+                </dt>
+                <dd className="mt-1 text-white/85">{site.location}</dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.18em] text-white/40">
+                  Now booking
+                </dt>
+                <dd className="mt-1 text-white/85">From {site.bookingFrom}</dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.18em] text-white/40">
+                  Qualifications
+                </dt>
+                <dd className="mt-3">
+                  <ul className="space-y-2.5 text-[0.95rem] leading-snug text-white/80">
+                    {qualifications.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
         </aside>
+      </div>
+
+      <div className="section-inner mt-10 sm:mt-14">
+        <figure className="photo-frame relative aspect-[3/2]">
+          <Image
+            src={danielTraining}
+            alt="Daniel Nolan during a training session"
+            fill
+            sizes="(min-width: 72rem) 72rem, 100vw"
+            placeholder="blur"
+            className="object-cover object-[center_30%]"
+          />
+        </figure>
       </div>
     </section>
   );

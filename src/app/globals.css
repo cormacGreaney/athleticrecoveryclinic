@@ -146,6 +146,14 @@ body {
   border-radius: 1.75rem;
 }
 
+.photo-frame {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  background: #12222a;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
 .btn-primary,
 .btn-secondary {
   display: inline-flex;

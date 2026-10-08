@@ -3,9 +3,11 @@ export const site = {
   shortName: "ARC",
   tagline: "Move better. Feel better. Recover better.",
   description:
-    "Sports massage, recovery treatments, and nutrition in Nenagh with Daniel Nolan.",
+    "Sports massage, recovery treatments, and nutrition in Nenagh with Daniel Nolan. Now taking bookings from 16 October.",
   location: "Nenagh, Co. Tipperary",
   locationShort: "Nenagh",
+  bookingFrom: "16 October",
+  statusLine: "Booking from 16 October",
   country: "Ireland",
   instagram: "https://www.instagram.com/athleticrecoveryclinic/",
   instagramHandle: "@athleticrecoveryclinic",

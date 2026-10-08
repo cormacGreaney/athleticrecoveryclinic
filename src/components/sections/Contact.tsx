@@ -31,11 +31,20 @@ export function Contact() {
       <div className="section-inner grid gap-10 md:grid-cols-[1fr_1.05fr] md:gap-14">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2 className="section-title mt-4">Get in touch</h2>
+          <h2 className="section-title mt-4">Book a session</h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-white/60 sm:text-lg">
-            The clinic is still being set up. If you want to book or ask a
-            question, here’s how to reach me.
+            Now taking bookings from {site.bookingFrom}. WhatsApp or Instagram are the
+            quickest ways to book, or get in touch below if you have a
+            question.
           </p>
+          <a
+            href={site.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary mt-7 w-full sm:w-auto"
+          >
+            Book on WhatsApp
+          </a>
         </div>
 
         <div className="surface-card overflow-hidden">

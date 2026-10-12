@@ -30,7 +30,7 @@ export function About() {
             </p>
             <p>
               I’m currently studying and developing my skills to be able to
-              treat sports injuries properly and safely. In the future, I plan
+              treat sports injuries. In the future, I plan
               to progress into physiotherapy or a similar clinical path,
               building on the hands-on work I do now so I can offer even more
               advanced treatment and rehabilitation treatments.
